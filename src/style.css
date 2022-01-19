@@ -1,0 +1,241 @@
+/* CSS RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ------------------------------------------------------------------- */
+/* 主要内容设置 */
+
+body {
+  /* background-color: rgb(208, 60, 60); */
+  background-color: rgb(233, 233, 233);
+}
+
+.searchBox {
+  display: flex;
+  justify-content: space-between;
+  /* 让输入框不紧贴这页面 */
+  margin: 24px 30px;
+}
+
+.searchBox > input {
+  /* 让搜索框占满 */
+  width: 100%;
+  /* 让跟搜索键分开 */
+  margin-right: 23px;
+  /* 取消默认border，不然后有黑色 */
+  border: none;
+  /* 主动设置高度 */
+  height: 34px;
+  border-radius: 4px;
+  /* 让文字输入时不跟输入框粘在一起 */
+  padding: 10px;
+  background: #ffffff;
+}
+
+.searchBox button {
+  /* 让文字不换行 */
+  white-space: nowrap;
+  width: 90px;
+  padding: 3px;
+  border: none;
+  border: 4px;
+  background: #5287c6;
+  border-radius: 4px;
+  /* 从figma直接抄过来 */
+  font-size: 16px;
+  color: #ffffff;
+}
+
+main > .siteList {
+  /* border: 1px solid red; */
+  /* 设置margin，让flex布局造成是space-between之间变小 */
+  margin: 40px;
+  /* margin: 30px; */
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.siteList > li {
+  /* display: flex;
+  flex-wrap: wrap;
+  margin: -20px; */
+  margin-right: 5px;
+  margin-top: 20px;
+}
+
+/* 注意>符号代表直接子元素 */
+.siteList .site {
+  position: relative;
+
+  width: 140px;
+  height: 140px;
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: center;
+  /* 变成上下排列 */
+  flex-direction: column;
+  /* 垂直居中 */
+  align-items: center;
+  background-color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.close:hover {
+  cursor: default;
+}
+
+.siteList .logo {
+  font-size: 64px;
+}
+
+.close {
+  /* display: none; */
+  top: 5px;
+  right: 10px;
+  position: absolute;
+}
+
+@media (min-width: 500px) {
+  .close {
+    display: none;
+  }
+}
+
+.siteList .site:hover > .close {
+  display: block;
+}
+
+.siteList .newSite {
+  width: 140px;
+  height: 140px;
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: center;
+  /* 变成上下排列 */
+  flex-direction: column;
+  /* 垂直居中 */
+  align-items: center;
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+/* .iconfont {
+  font-size: 64px;
+} */
+
+.icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+  /* font-size: 64px; */
+}
+
+img {
+  /* 如果字体大小是64px，那么1em=64px */
+  width: 1em;
+  height: 1em;
+}
+
+@media (max-width: 500px) {
+  main > .siteList {
+    margin: 40px;
+    /* 让手机端能够平均布局 */
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 380px) {
+  main > .siteList {
+    /* margin: 10px; */
+    /* 让手机端能够平均布局 */
+  }
+
+  .siteList .newSite {
+    width: 120px;
+    height: 120px;
+  }
+
+  .siteList .site {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@media (max-width: 300px) {
+  main > .siteList {
+    margin: 15px;
+    /* 让手机端能够平均布局 */
+  }
+
+  .siteList .newSite {
+    width: 110px;
+    height: 110px;
+  }
+
+  .siteList .site {
+    width: 110px;
+    height: 110px;
+  }
+}
+
+@media (min-width: 500px) {
+  main > .siteList {
+    margin-right: -25px;
+    margin-left: 0;
+  }
+
+  .siteList > li {
+    /* display: flex;
+    flex-wrap: wrap;
+    margin: -20px; */
+    margin-right: 25px;
+    margin-top: 25px;
+  }
+
+  .siteList .site {
+    width: 160px;
+    height: 160px;
+  }
+
+  .siteList .newSite {
+    width: 160px;
+    height: 160px;
+  }
+
+  .searchBox {
+    max-width: 400px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  main {
+    /* outline: 1px solid red; */
+    /* max-width: 900px; */
+
+    /* 如果我设置为max-width，如果页面小于900，会自动换行，而我不想它换行 */
+    width: 900px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
