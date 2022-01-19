@@ -119,6 +119,10 @@ main > .siteList {
 }
 
 @media (min-width: 500px) {
+  .close {
+    display: none;
+  }
+
   .siteList .site:hover > .close {
     display: block;
   }
@@ -165,6 +169,7 @@ img {
   }
 
   .close {
+    display: none;
     top: 5px;
     right: 10px;
     position: absolute;

@@ -165,6 +165,7 @@ img {
   }
 
   .close {
+    display: none;
     top: 5px;
     right: 10px;
     position: absolute;

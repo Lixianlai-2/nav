@@ -53,7 +53,7 @@ const render = () => {
 // JSON.parse(localStorage.getItem("saveHashMapString")) ||
 const saveHashMapString = localStorage.getItem("saveHashMapString");
 const saveHashMapObj = JSON.parse(saveHashMapString);
-// console.log(saveHashMapObj);
+console.log(saveHashMapObj);
 
 const hashMap = saveHashMapObj || [
   { logo: "B", url: "https://bilibili.com" },
@@ -64,11 +64,11 @@ const hashMap = saveHashMapObj || [
   },
 ];
 
-// console.log(hashMap);
+console.log(hashMap);
 // 这里用render是因为需要读取目前local storage中的内容
 render();
 
-// console.log(hashMap);
+console.log(hashMap);
 // -----------------------------------------
 // 添加新网站
 $(".newSite").on("click", () => {
@@ -119,31 +119,12 @@ let timer = null;
 let startTime = "";
 let endTime = "";
 const closeBtn = $(".close");
-console.log(closeBtn);
-
 const $li = $("li");
 
-// 这部分代表多长时间后会执行timer
 $li.on("touchstart", (e) => {
-  console.log("触摸开始了");
-
   startTime = +new Date();
-
+  console.log(startTime);
   timer = setTimeout(() => {
-    for (let i = 0; i < closeBtn.length; i++) {
-      // closeBtn[i].classList.add("closeSelected");
-      closeBtn[i].style.display = "block";
-    }
-  }, 2000);
-});
-
-$li.on("touchend", () => {
-  endTime = +new Date();
-
-  console.log(timer);
-
-  if (endTime - startTime < 2000) {
-    // 如果按下到抬起拇指的时间小于2000毫秒，就删除前面的timer，也就意味着不执行显示按钮的功能
-    clearTimeout(timer);
-  }
+    closeBtn.style.classList.add(".closeSelected");
+  }, 3000);
 });

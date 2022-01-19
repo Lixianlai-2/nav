@@ -119,6 +119,10 @@ main > .siteList {
 }
 
 @media (min-width: 500px) {
+  .close {
+    display: none;
+  }
+
   .siteList .site:hover > .close {
     display: block;
   }
@@ -162,12 +166,6 @@ img {
     margin: 40px;
     /* 让手机端能够平均布局 */
     justify-content: space-between;
-  }
-
-  .close {
-    top: 5px;
-    right: 10px;
-    position: absolute;
   }
 }
 

@@ -114,14 +114,14 @@ main > .siteList {
   position: absolute;
 }
 
-.closeSelected {
-  display: block;
+@media (min-width: 500px) {
+  .close {
+    display: none;
+  }
 }
 
-@media (min-width: 500px) {
-  .siteList .site:hover > .close {
-    display: block;
-  }
+.siteList .site:hover > .close {
+  display: block;
 }
 
 .siteList .newSite {
@@ -162,12 +162,6 @@ img {
     margin: 40px;
     /* 让手机端能够平均布局 */
     justify-content: space-between;
-  }
-
-  .close {
-    top: 5px;
-    right: 10px;
-    position: absolute;
   }
 }
 

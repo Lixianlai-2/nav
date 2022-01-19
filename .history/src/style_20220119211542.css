@@ -119,6 +119,10 @@ main > .siteList {
 }
 
 @media (min-width: 500px) {
+  .close {
+    display: none;
+  }
+
   .siteList .site:hover > .close {
     display: block;
   }
@@ -164,11 +168,7 @@ img {
     justify-content: space-between;
   }
 
-  .close {
-    top: 5px;
-    right: 10px;
-    position: absolute;
-  }
+  /* display: none; */
 }
 
 @media (max-width: 380px) {

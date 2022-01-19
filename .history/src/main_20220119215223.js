@@ -123,7 +123,6 @@ console.log(closeBtn);
 
 const $li = $("li");
 
-// 这部分代表多长时间后会执行timer
 $li.on("touchstart", (e) => {
   console.log("触摸开始了");
 
@@ -134,16 +133,5 @@ $li.on("touchstart", (e) => {
       // closeBtn[i].classList.add("closeSelected");
       closeBtn[i].style.display = "block";
     }
-  }, 2000);
-});
-
-$li.on("touchend", () => {
-  endTime = +new Date();
-
-  console.log(timer);
-
-  if (endTime - startTime < 2000) {
-    // 如果按下到抬起拇指的时间小于2000毫秒，就删除前面的timer，也就意味着不执行显示按钮的功能
-    clearTimeout(timer);
-  }
+  }, 700);
 });

@@ -134,16 +134,9 @@ $li.on("touchstart", (e) => {
       // closeBtn[i].classList.add("closeSelected");
       closeBtn[i].style.display = "block";
     }
-  }, 2000);
+  }, 700);
 });
 
 $li.on("touchend", () => {
   endTime = +new Date();
-
-  console.log(timer);
-
-  if (endTime - startTime < 2000) {
-    // 如果按下到抬起拇指的时间小于2000毫秒，就删除前面的timer，也就意味着不执行显示按钮的功能
-    clearTimeout(timer);
-  }
 });
