@@ -26,6 +26,8 @@ a {
 body {
   /* background-color: rgb(208, 60, 60); */
   background-color: rgb(233, 233, 233);
+  background: url(./img/nasa-Q1p7bh3SHj8-unsplash.jpg);
+  background-size: cover;
 }
 
 .searchBox {
@@ -57,11 +59,15 @@ body {
   padding: 3px;
   border: none;
   border: 4px;
-  background: #5287c6;
+  background: #5286c6cc;
   border-radius: 4px;
   /* 从figma直接抄过来 */
   font-size: 16px;
   color: #ffffff;
+}
+
+.searchBox button:hover {
+  background: #5286c6;
 }
 
 main > .siteList {
